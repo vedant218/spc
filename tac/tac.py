@@ -1,6 +1,3 @@
-# Define a dictionary to store the TAC
-tac = {}
-
 # Define a counter to keep track of the next available temporary variable
 temp_counter = 0
 
@@ -31,16 +28,9 @@ def gen_tac(expr):
         op = tokens[i]
         arg1 = result
         arg2 = tokens[i+1]
-        tac[temp] = (op, arg1, arg2)
-
-        # Update the result variable
-        result = temp
-
-    # Return the final temporary variable
-    return result
+        print(temp, "=", arg1, " ", op, "  ", arg2)
 
 
 # Example usage
 expr = "a + b * c - d"
-result = gen_tac(expr)
-print(tac)
+gen_tac(expr)

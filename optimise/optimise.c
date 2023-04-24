@@ -1,6 +1,6 @@
-#include <stdio.h>
+= #include<stdio.h>
 #include <string.h>
-struct op
+    struct op
 {
     char l;
     char r[20];
